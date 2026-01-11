@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Юридическая консультация по водительскому удостоверению — онлайн</title>
+  <meta name="description" content="Онлайн-консультация по вопросам водительского удостоверения: разберём ситуацию, объясним законные варианты и порядок действий. Telegram / WhatsApp." />
+
+  <!-- Open Graph (для красивого превью в ВК) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Юридическая консультация по водительскому удостоверению — онлайн" />
+  <meta property="og:description" content="Разберём вашу ситуацию и объясним законные варианты действий. Ответ в чате. Telegram / WhatsApp." />
+  <!-- Укажи реальный URL после подключения домена -->
+  <meta property="og:url" content="https://example.ru/" />
+  <!-- Если добавишь картинку, укажи её URL (желательно 1200×630). Пока оставляем пустым. -->
+  <!-- <meta property="og:image" content="https://example.ru/og.jpg" /> -->
+
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Favicon (SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563EB'/%3E%3Cstop offset='1' stop-color='%2360A5FA'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M18 33l8 8 20-20' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <!-- Микроразметка (заполни поля ниже под себя) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Юридическая консультация по водительскому удостоверению",
+    "areaServed": "RU",
+    "availableLanguage": ["ru"],
+    "serviceType": "Юридическая консультация",
+    "url": "https://example.ru/",
+    "telephone": "+7-929-021-70-97",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+7-929-021-70-97",
+      "availableLanguage": ["ru"]
+    }]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0B1220;
+      --surface:#0F172A;
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.10);
+      --line:rgba(255,255,255,.12);
+      --text:#EEF2FF;
+      --muted:rgba(238,242,255,.72);
+      --muted2:rgba(238,242,255,.58);
+
+      --vk:#2D81E0;         /* “VK-like” */
+      --vk2:#5CA9FF;
+      --ok:#22C55E;
+      --warn:#F59E0B;
+
+      --r:18px;
+      --shadow:0 18px 48px rgba(0,0,0,.34);
+      --w:1120px;
+
+      --focus: 0 0 0 4px rgba(45,129,224,.25);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(900px 560px at 12% 0%, rgba(45,129,224,.18), transparent 60%),
+        radial-gradient(900px 520px at 100% 6%, rgba(92,169,255,.14), transparent 58%),
+        linear-gradient(180deg, #0B1220, #0C1832);
+    }
+
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--w), calc(100% - 32px)); margin:0 auto}
+    .sr-only{
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
+
+    /* Top bar */
+    .top{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(12px);
+      background: rgba(11,18,32,.62);
+      border-bottom:1px solid var(--line);
+    }
+    .top__in{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:12px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:0;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:14px;
+      background: linear-gradient(135deg, var(--vk), var(--vk2));
+      box-shadow: 0 14px 30px rgba(45,129,224,.20);
+      display:grid; place-items:center;
+      overflow:hidden;
+    }
+    .logo svg{display:block}
+    .btxt{min-width:0}
+    .btxt b{
+      display:block;
+      font-weight:950;
+      letter-spacing:.2px;
+      line-height:1.1;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width: 54vw;
+    }
+    .btxt span{
+      display:block;
+      margin-top:2px;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:700;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width: 60vw;
+    }
+    .status{
+      display:flex; align-items:center; gap:10px;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size:13px;
+      font-weight:850;
+      white-space:nowrap;
+    }
+    .dot{
+      width:9px; height:9px; border-radius:50%;
+      background: var(--ok);
+      box-shadow: 0 0 0 5px rgba(34,197,94,.14);
+    }
+
+    /* Layout */
+    main{padding:22px 0 18px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap:14px;
+      align-items:stretch;
+    }
+
+    .panel{
+      border:1px solid var(--line);
+      border-radius: var(--r);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .pad{padding:18px}
+
+    h1{
+      margin:6px 0 10px;
+      font-size: clamp(26px, 3.0vw, 40px);
+      line-height:1.08;
+      letter-spacing:-.6px;
+    }
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size: 15.8px;
+      max-width: 70ch;
+    }
+
+    /* Trust + chips */
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      font-weight:900;
+      color: rgba(238,242,255,.90);
+      font-size:12.5px;
+    }
+    .chip i{
+      width:20px; height:20px; border-radius:8px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.10);
+      font-style:normal;
+      font-size:12px;
+    }
+
+    /* Key points */
+    .kpi{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap:10px;
+    }
+    .kpi .box{
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .kpi .box b{
+      display:block;
+      font-weight:950;
+      font-size:13px;
+      letter-spacing:.1px;
+    }
+    .kpi .box span{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      font-weight:650;
+      font-size:12.5px;
+    }
+
+    /* Steps */
+    .steps{margin-top:12px; display:grid; gap:8px}
+    @media (min-width: 981px){
+      .steps{grid-template-columns:1fr 1fr}
+      .steps .step:nth-child(3){grid-column:1 / -1;}
+    }
+    .step{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .n{
+      flex:0 0 auto;
+      width:28px; height:28px; border-radius:11px;
+      display:grid; place-items:center;
+      font-weight:1000;
+      background: rgba(45,129,224,.18);
+      border:1px solid rgba(45,129,224,.30);
+      color: rgba(238,242,255,.95);
+      font-size:13px;
+      margin-top:1px;
+    }
+    .step__t{font-weight:1000; margin:0 0 1px; font-size:14px}
+    .step__d{margin:0; color:var(--muted); font-weight:650; font-size:13px}
+
+    /* “What we help with” list */
+    .list{
+      margin-top:12px;
+      display:grid;
+      gap:8px;
+    }
+    .li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .li .ic{
+      width:28px; height:28px; border-radius:11px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      font-size:13px;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .li b{display:block; font-size:13.5px; font-weight:950; margin:0}
+    .li p{margin:1px 0 0; color:var(--muted); font-weight:650; font-size:13px}
+
+    /* Buttons */
+    .actions{display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:12px}
+    .btn{
+      display:flex; align-items:center; justify-content:center;
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      font-weight:1000;
+      box-shadow: 0 10px 24px rgba(0,0,0,.22);
+      transition: .16s ease;
+      text-align:center;
+      user-select:none;
+      min-height:46px;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn:focus{outline:none; box-shadow: var(--focus), 0 10px 24px rgba(0,0,0,.22)}
+    .btn--tg{
+      border:none;
+      background: linear-gradient(135deg, #2AABEE, #1E79D6);
+      color:#07101f;
+      box-shadow: 0 16px 30px rgba(42,171,238,.16);
+    }
+    .btn--wa{
+      border:none;
+      background: linear-gradient(135deg, #25D366, #15B853);
+      color:#07101f;
+      box-shadow: 0 16px 30px rgba(37,211,102,.18);
+    }
+    .btn--vk{
+      border:none;
+      background: linear-gradient(135deg, var(--vk), var(--vk2));
+      color:#07101f;
+      box-shadow: 0 16px 30px rgba(45,129,224,.18);
+    }
+    .btn--ghost{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.18);
+      color: rgba(238,242,255,.92);
+      box-shadow:none;
+    }
+    .btn small{
+      display:block;
+      font-size:11px;
+      font-weight:850;
+      opacity:.82;
+      margin-top:2px;
+    }
+
+    /* Right side */
+    .side{display:flex; flex-direction:column; min-height:100%}
+    .side__head{
+      padding:16px 16px 0;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .side__title{margin:0; font-weight:1000; letter-spacing:-.2px; font-size:16px}
+    .tag{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size:12px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+    .card{
+      margin:12px 16px 0;
+      padding:14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.14);
+      background:
+        radial-gradient(220px 140px at 18% 30%, rgba(45,129,224,.18), transparent 65%),
+        radial-gradient(240px 160px at 85% 25%, rgba(92,169,255,.16), transparent 65%),
+        rgba(255,255,255,.05);
+      box-shadow: 0 18px 40px rgba(0,0,0,.26);
+    }
+    .card h2{
+      margin:0 0 6px;
+      font-size:16px;
+      font-weight:1000;
+      letter-spacing:-.2px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      font-size:13.2px;
+    }
+
+    .doc{
+      margin-top:12px;
+      display:grid;
+      gap:10px;
+    }
+    .doc .row{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .doc .row .ic{
+      width:28px; height:28px; border-radius:11px;
+      display:grid; place-items:center;
+      background: rgba(245,158,11,.12);
+      border:1px solid rgba(245,158,11,.22);
+      font-size:13px;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .doc .row b{
+      display:block;
+      font-weight:950;
+      font-size:13.5px;
+      margin:0;
+    }
+    .doc .row span{
+      display:block;
+      margin-top:2px;
+      color:var(--muted);
+      font-weight:650;
+      font-size:12.8px;
+    }
+
+    .side__cta{
+      padding:12px 16px 0;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+
+    /* FAQ */
+    .faq{margin-top:12px}
+    details{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius:14px;
+      padding:10px 12px;
+    }
+    details + details{margin-top:8px}
+    summary{
+      cursor:pointer;
+      font-weight:950;
+      font-size:13.5px;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-weight:650;
+      font-size:13px;
+    }
+
+    /* Footer legal */
+    .legal{
+      margin-top:12px;
+      padding:12px 14px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:12px;
+      font-weight:650;
+    }
+    .legal a{ text-decoration: underline; text-underline-offset: 2px; }
+
+    footer{
+      padding:14px 0 18px;
+      color: var(--muted2);
+      font-size:12px;
+      text-align:center;
+    }
+
+    /* Mobile fixed CTA */
+    .fixed{
+      position:fixed;
+      left:16px; right:16px; bottom:14px;
+      z-index:60;
+      display:none;
+      gap:10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .fixed .btn{border-radius:18px; padding:14px 16px}
+    .spacer{display:none; height:0}
+
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+      .status{display:none}
+      .kpi{grid-template-columns:1fr}
+    }
+    @media (max-width: 720px){
+      .actions{grid-template-columns:1fr}
+      .fixed{display:grid}
+      .spacer{display:block; height:92px}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="top">
+    <div class="wrap top__in">
+      <div class="brand" aria-label="Бренд">
+        <div class="logo" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="btxt">
+          <b>Юридическая помощь</b>
+          <span>Конфиденциально • Онлайн • По всей России</span>
+        </div>
+      </div>
+
+      <div class="status" aria-label="Статус">
+        <span class="dot" aria-hidden="true"></span>
+        На связи
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap grid">
+
+      <!-- LEFT -->
+      <section class="panel">
+        <div class="pad">
+          <h1>Разберём вашу ситуацию с водительским удостоверением и объясним законные варианты действий</h1>
+          <p class="lead">
+            Пишите в чат: что произошло и когда. Мы уточним детали и подскажем, какие шаги обычно делают в подобных случаях.
+            Без звонков — спокойно и по делу.
+          </p>
+
+          <div class="chips" aria-label="Преимущества">
+            <div class="chip"><i aria-hidden="true">🕒</i>Ответ в чате</div>
+            <div class="chip"><i aria-hidden="true">🔒</i>Конфиденциально</div>
+            <div class="chip"><i aria-hidden="true">⚖️</i>Только законные способы</div>
+            <div class="chip"><i aria-hidden="true">📍</i>Удалённо</div>
+          </div>
+
+          <div class="kpi" aria-label="Ожидания по работе">
+            <div class="box">
+              <b>Первичный разбор</b>
+              <span>Коротко оценим ситуацию и подскажем направление</span>
+            </div>
+            <div class="box">
+              <b>Порядок действий</b>
+              <span>Что сделать в первую очередь и какие документы важны</span>
+            </div>
+            <div class="box">
+              <b>Без “гарантий”</b>
+              <span>Только честные варианты и риски, без обещаний результата</span>
+            </div>
+          </div>
+
+          <div class="steps" aria-label="Как проходит консультация">
+            <div class="step">
+              <div class="n">1</div>
+              <div>
+                <p class="step__t">Пишите в мессенджер</p>
+                <p class="step__d">Коротко: что случилось, дата/город, что уже есть на руках.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="n">2</div>
+              <div>
+                <p class="step__t">Уточняем детали</p>
+                <p class="step__d">Пара вопросов, чтобы не дать ошибочный совет.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="n">3</div>
+              <div>
+                <p class="step__t">Даём понятный план</p>
+                <p class="step__d">Что можно сделать законно, сроки, порядок, на что обратить внимание.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="actions" aria-label="Связаться">
+            <!-- Можно добавить UTM: ?utm_source=vk&utm_medium=cpc&utm_campaign=... -->
+            <a class="btn btn--tg"
+               href="https://t.me/evgeniy_pravahelper?start=vk"
+               target="_blank" rel="noopener nofollow">
+              💬 Написать в Telegram
+              <span class="sr-only">Откроется в новой вкладке</span>
+            </a>
+
+            <a class="btn btn--wa"
+               href="https://wa.me/79290217097?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%83%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8E.%0A%0A%D0%9A%D0%BE%D1%80%D0%BE%D1%82%D0%BA%D0%BE%20%D0%BE%D0%BF%D0%B8%D1%88%D1%83%20%D1%81%D0%B8%D1%82%D1%83%D0%B0%D1%86%D0%B8%D1%8E%3A%20"
+               target="_blank" rel="noopener nofollow">
+              💬 Написать в WhatsApp
+              <span class="sr-only">Откроется в новой вкладке</span>
+            </a>
+
+            <button class="btn btn--ghost" id="copyBtn" type="button" aria-label="Скопировать шаблон сообщения">
+              📋 Скопировать шаблон
+              <small>и вставить в чат</small>
+            </button>
+
+            <a class="btn btn--vk"
+               href="#faq"
+               aria-label="Перейти к частым вопросам">
+              ❓ Частые вопросы
+              <small>коротко и по делу</small>
+            </a>
+          </div>
+
+          <div class="list" aria-label="С чем можем помочь">
+            <div class="li">
+              <div class="ic" aria-hidden="true">🧾</div>
+              <div>
+                <b>Разбор постановлений и документов</b>
+                <p>Подскажем, какие пункты важны и что проверять в первую очередь.</p>
+              </div>
+            </div>
+
+            <div class="li">
+              <div class="ic" aria-hidden="true">🗂️</div>
+              <div>
+                <b>Порядок обжалования и сроки</b>
+                <p>Объясним общий порядок действий и типовые сроки по ситуации.</p>
+              </div>
+            </div>
+
+            <div class="li">
+              <div class="ic" aria-hidden="true">🧠</div>
+              <div>
+                <b>Оценка рисков и вариантов</b>
+                <p>Честно расскажем, какие варианты законны и чем они отличаются.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal" aria-label="Юридическая информация">
+            <b style="color:rgba(238,242,255,.92);">Важно:</b> информация носит справочный характер и не является публичной офертой.
+            Первичный разбор в чате — без оплаты; дальнейшая юридическая помощь — по согласованию и при наличии возможности.
+            <br/><br/>
+            Для модерации и доверия лучше заполнить блок “Реквизиты/контакты” справа (ниже) и разместить
+            <a href="#privacy">политику конфиденциальности</a>.
+          </div>
+
+          <div class="spacer" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- RIGHT -->
+      <aside class="panel side" aria-label="Контакты и реквизиты">
+        <div class="side__head">
+          <p class="side__title">Контакты и формат</p>
+          <span class="tag">онлайн-чат</span>
+        </div>
+
+        <div class="card" aria-label="Как быстро начать">
+          <h2>Как начать</h2>
+          <p>Отправьте короткое описание и (если есть) фото/сканы документов. Можно без “лирики” — важны факты.</p>
+
+          <div class="doc" aria-label="Что лучше прислать">
+            <div class="row">
+              <div class="ic" aria-hidden="true">📍</div>
+              <div>
+                <b>Город и дата</b>
+                <span>Где и когда произошло, что именно случилось.</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="ic" aria-hidden="true">📄</div>
+              <div>
+                <b>Документы (если есть)</b>
+                <span>Постановление, протокол, повестка, уведомления — что на руках.</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="ic" aria-hidden="true">🧷</div>
+              <div>
+                <b>Что уже делали</b>
+                <span>Писали жалобу, были в суде, сдавали документы и т.п.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side__cta" aria-label="Быстрые кнопки">
+          <a class="btn btn--tg"
+             href="https://t.me/evgeniy_pravahelper?start=vk"
+             target="_blank" rel="noopener nofollow">
+            Telegram<br><small>написать сейчас</small>
+          </a>
+
+          <a class="btn btn--wa"
+             href="https://wa.me/79290217097?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%83%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8E.%0A%0A%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%3A%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D0%B4%D0%B0%D1%82%D0%B0%2C%20%D1%87%D1%82%D0%BE%20%D1%81%D0%BB%D1%83%D1%87%D0%B8%D0%BB%D0%BE%D1%81%D1%8C%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B%20%D0%B5%D1%81%D1%82%D1%8C%20(%D0%B5%D1%81%D0%BB%D0%B8%20%D0%B5%D1%81%D1%82%D1%8C)."
+             target="_blank" rel="noopener nofollow">
+            WhatsApp<br><small>быстрый чат</small>
+          </a>
+
+          <div class="legal" style="margin:0; border-radius:18px" aria-label="Реквизиты и идентификация">
+            <b style="color:rgba(238,242,255,.92);">Реквизиты/идентификация</b> (рекомендуется для доверия и модерации):
+            <br/>• ФИО/Наименование: <span style="color:rgba(238,242,255,.92)">[заполните]</span>
+            <br/>• Статус: <span style="color:rgba(238,242,255,.92)">[юрист / адвокат / ИП / ООО]</span>
+            <br/>• ИНН/ОГРН (если есть): <span style="color:rgba(238,242,255,.92)">[заполните]</span>
+            <br/>• Email: <span style="color:rgba(238,242,255,.92)">[заполните]</span>
+          </div>
+        </div>
+
+        <div class="pad" id="faq" aria-label="FAQ">
+          <h2 style="margin:0 0 10px; font-size:16px; font-weight:1000;">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Это бесплатно?</summary>
+              <p>Первичный разбор в переписке — без оплаты. Если потребуется подготовка документов/представительство, условия обсуждаются отдельно.</p>
+            </details>
+
+            <details>
+              <summary>Вы гарантируете результат?</summary>
+              <p>Нет. В юридических вопросах результат зависит от обстоятельств и документов. Мы объясняем законные варианты, риски и порядок действий.</p>
+            </details>
+
+            <details>
+              <summary>Что нужно прислать?</summary>
+              <p>Город/дату, краткое описание и фото/сканы документов (если есть). Если документов нет — напишите, что именно происходило и кто оформлял.</p>
+            </details>
+
+            <details>
+              <summary>По всей России?</summary>
+              <p>Консультация в чате — да. Возможность дальнейшего сопровождения зависит от ситуации и региона.</p>
+            </details>
+          </div>
+
+          <div class="legal" id="privacy" aria-label="Политика конфиденциальности (кратко)">
+            <b style="color:rgba(238,242,255,.92);">Кратко о конфиденциальности:</b>
+            мы используем ваши сообщения и документы только для консультации и не передаём их третьим лицам без вашего согласия,
+            если иное не требуется законом. Полную политику можно разместить отдельной страницей/разделом при подключении домена.
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026. Онлайн-консультации по вопросам водительского удостоверения.
+  </footer>
+
+  <!-- Mobile fixed buttons -->
+  <div class="fixed" aria-label="Быстрые кнопки (моб)">
+    <a class="btn btn--tg"
+       href="https://t.me/evgeniy_pravahelper?start=vk"
+       target="_blank" rel="noopener nofollow">
+      Telegram
+    </a>
+    <a class="btn btn--wa"
+       href="https://wa.me/79290217097?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%83%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8E.%0A%0A%D0%9A%D0%BE%D1%80%D0%BE%D1%82%D0%BA%D0%BE%20%D0%BE%D0%BF%D0%B8%D1%88%D1%83%20%D1%81%D0%B8%D1%82%D1%83%D0%B0%D1%86%D0%B8%D1%8E%3A%20"
+       target="_blank" rel="noopener nofollow">
+      WhatsApp
+    </a>
+  </div>
+
+  <script>
+    // Шаблон сообщения + копирование (повышает конверсию без “подозрительных” обещаний)
+    (function(){
+      const template =
+`Здравствуйте! Нужна консультация по водительскому удостоверению.
+
+Город/регион:
+Дата события:
+Что произошло (кратко):
+Какие документы на руках (если есть):
+Что уже предпринимал(а):
+
+Могу приложить фото/сканы документов.`;
+
+      const btn = document.getElementById('copyBtn');
+      if (!btn) return;
+
+      btn.addEventListener('click', async () => {
+        try{
+          await navigator.clipboard.writeText(template);
+          const old = btn.innerHTML;
+          btn.innerHTML = "✅ Шаблон скопирован<small>вставьте в чат</small>";
+          setTimeout(() => btn.innerHTML = old, 1800);
+        }catch(e){
+          // fallback
+          const ta = document.createElement('textarea');
+          ta.value = template;
+          document.body.appendChild(ta);
+          ta.select();
+          try{ document.execCommand('copy'); }catch(_){}
+          document.body.removeChild(ta);
+          const old = btn.innerHTML;
+          btn.innerHTML = "✅ Шаблон скопирован<small>вставьте в чат</small>";
+          setTimeout(() => btn.innerHTML = old, 1800);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
