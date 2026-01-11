@@ -4,64 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Юридическая консультация по водительскому удостоверению — онлайн</title>
-  <meta name="description" content="Онлайн-консультация по вопросам водительского удостоверения: разберём ситуацию, объясним законные варианты и порядок действий. Telegram / WhatsApp." />
+  <meta name="description" content="Онлайн-консультация по вопросам водительского удостоверения: разберём ситуацию, объясним законные варианты и предложим возможные решения. Telegram / WhatsApp." />
 
-  <!-- Open Graph (для красивого превью в ВК) -->
+  <!-- Open Graph (превью) -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:title" content="Юридическая консультация по водительскому удостоверению — онлайн" />
-  <meta property="og:description" content="Разберём вашу ситуацию и объясним законные варианты действий. Ответ в чате. Telegram / WhatsApp." />
-  <!-- Укажи реальный URL после подключения домена -->
+  <meta property="og:description" content="Разберём вашу ситуацию и предложим возможные решения. Ответ в чате. Telegram / WhatsApp." />
   <meta property="og:url" content="https://example.ru/" />
-  <!-- Если добавишь картинку, укажи её URL (желательно 1200×630). Пока оставляем пустым. -->
   <!-- <meta property="og:image" content="https://example.ru/og.jpg" /> -->
 
-  <meta name="theme-color" content="#0F172A" />
+  <meta name="theme-color" content="#0B0B0D" />
 
-  <!-- Favicon (SVG) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563EB'/%3E%3Cstop offset='1' stop-color='%2360A5FA'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M18 33l8 8 20-20' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-
-  <!-- Микроразметка (заполни поля ниже под себя) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Юридическая консультация по водительскому удостоверению",
-    "areaServed": "RU",
-    "availableLanguage": ["ru"],
-    "serviceType": "Юридическая консультация",
-    "url": "https://example.ru/",
-    "telephone": "+7-929-021-70-97",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "telephone": "+7-929-021-70-97",
-      "availableLanguage": ["ru"]
-    }]
-  }
-  </script>
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0B0D'/%3E%3Cpath d='M18 33l8 8 20-20' fill='none' stroke='%23F59E0B' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 
   <style>
     :root{
-      --bg:#0B1220;
-      --surface:#0F172A;
-      --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.10);
-      --line:rgba(255,255,255,.12);
-      --text:#EEF2FF;
-      --muted:rgba(238,242,255,.72);
-      --muted2:rgba(238,242,255,.58);
+      --bg:#0B0B0D;              /* почти чёрный */
+      --bg2:#101014;
+      --surface:#121216;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.10);
+      --line: rgba(255,255,255,.12);
 
-      --vk:#2D81E0;         /* “VK-like” */
-      --vk2:#5CA9FF;
+      --text:#F5F5F5;
+      --muted: rgba(245,245,245,.72);
+      --muted2: rgba(245,245,245,.58);
+
+      --accent:#F59E0B;          /* оранжевый */
+      --accent2:#FDBA74;         /* светлый оранж */
       --ok:#22C55E;
-      --warn:#F59E0B;
 
       --r:18px;
-      --shadow:0 18px 48px rgba(0,0,0,.34);
-      --w:1120px;
+      --shadow: 0 18px 52px rgba(0,0,0,.40);
+      --w: 1120px;
 
-      --focus: 0 0 0 4px rgba(45,129,224,.25);
+      --focus: 0 0 0 4px rgba(245,158,11,.25);
     }
 
     *{box-sizing:border-box}
@@ -71,9 +50,9 @@
       color:var(--text);
       font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       background:
-        radial-gradient(900px 560px at 12% 0%, rgba(45,129,224,.18), transparent 60%),
-        radial-gradient(900px 520px at 100% 6%, rgba(92,169,255,.14), transparent 58%),
-        linear-gradient(180deg, #0B1220, #0C1832);
+        radial-gradient(900px 560px at 12% 0%, rgba(245,158,11,.16), transparent 60%),
+        radial-gradient(900px 520px at 100% 6%, rgba(253,186,116,.10), transparent 58%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
     }
 
     a{color:inherit;text-decoration:none}
@@ -83,11 +62,11 @@
       overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
     }
 
-    /* Top bar */
+    /* Top */
     .top{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(12px);
-      background: rgba(11,18,32,.62);
+      background: rgba(11,11,13,.72);
       border-bottom:1px solid var(--line);
     }
     .top__in{
@@ -100,8 +79,8 @@
     }
     .logo{
       width:40px; height:40px; border-radius:14px;
-      background: linear-gradient(135deg, var(--vk), var(--vk2));
-      box-shadow: 0 14px 30px rgba(45,129,224,.20);
+      background: linear-gradient(135deg, rgba(245,158,11,.95), rgba(253,186,116,.92));
+      box-shadow: 0 14px 30px rgba(245,158,11,.14);
       display:grid; place-items:center;
       overflow:hidden;
     }
@@ -153,7 +132,6 @@
       gap:14px;
       align-items:stretch;
     }
-
     .panel{
       border:1px solid var(--line);
       border-radius: var(--r);
@@ -176,28 +154,28 @@
       max-width: 70ch;
     }
 
-    /* Trust + chips */
+    /* Chips */
     .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
     .chip{
       display:inline-flex; align-items:center; gap:8px;
       padding:8px 10px;
       border-radius:999px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.05);
+      background: rgba(255,255,255,.04);
       font-weight:900;
-      color: rgba(238,242,255,.90);
+      color: rgba(245,245,245,.92);
       font-size:12.5px;
     }
     .chip i{
       width:20px; height:20px; border-radius:8px;
       display:grid; place-items:center;
-      background: rgba(255,255,255,.07);
+      background: rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.10);
       font-style:normal;
       font-size:12px;
     }
 
-    /* Key points */
+    /* KPI */
     .kpi{
       margin-top:12px;
       display:grid;
@@ -242,16 +220,16 @@
       width:28px; height:28px; border-radius:11px;
       display:grid; place-items:center;
       font-weight:1000;
-      background: rgba(45,129,224,.18);
-      border:1px solid rgba(45,129,224,.30);
-      color: rgba(238,242,255,.95);
+      background: rgba(245,158,11,.16);
+      border:1px solid rgba(245,158,11,.28);
+      color: rgba(245,245,245,.95);
       font-size:13px;
       margin-top:1px;
     }
     .step__t{font-weight:1000; margin:0 0 1px; font-size:14px}
     .step__d{margin:0; color:var(--muted); font-weight:650; font-size:13px}
 
-    /* “What we help with” list */
+    /* List */
     .list{
       margin-top:12px;
       display:grid;
@@ -267,11 +245,12 @@
     .li .ic{
       width:28px; height:28px; border-radius:11px;
       display:grid; place-items:center;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
+      background: rgba(245,158,11,.12);
+      border:1px solid rgba(245,158,11,.22);
       font-size:13px;
       flex:0 0 auto;
       margin-top:1px;
+      color: rgba(245,245,245,.95);
     }
     .li b{display:block; font-size:13.5px; font-weight:950; margin:0}
     .li p{margin:1px 0 0; color:var(--muted); font-weight:650; font-size:13px}
@@ -283,7 +262,7 @@
       padding:12px 12px;
       border-radius:16px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
+      background: rgba(255,255,255,.05);
       font-weight:1000;
       box-shadow: 0 10px 24px rgba(0,0,0,.22);
       transition: .16s ease;
@@ -292,13 +271,14 @@
       min-height:46px;
       cursor:pointer;
     }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08)}
     .btn:focus{outline:none; box-shadow: var(--focus), 0 10px 24px rgba(0,0,0,.22)}
-    .btn--tg{
+
+    .btn--primary{
       border:none;
-      background: linear-gradient(135deg, #2AABEE, #1E79D6);
-      color:#07101f;
-      box-shadow: 0 16px 30px rgba(42,171,238,.16);
+      background: linear-gradient(135deg, rgba(245,158,11,.95), rgba(253,186,116,.92));
+      color:#0B0B0D;
+      box-shadow: 0 16px 30px rgba(245,158,11,.16);
     }
     .btn--wa{
       border:none;
@@ -306,16 +286,10 @@
       color:#07101f;
       box-shadow: 0 16px 30px rgba(37,211,102,.18);
     }
-    .btn--vk{
-      border:none;
-      background: linear-gradient(135deg, var(--vk), var(--vk2));
-      color:#07101f;
-      box-shadow: 0 16px 30px rgba(45,129,224,.18);
-    }
     .btn--ghost{
-      background: rgba(255,255,255,.06);
+      background: rgba(255,255,255,.05);
       border:1px solid rgba(255,255,255,.18);
-      color: rgba(238,242,255,.92);
+      color: rgba(245,245,245,.92);
       box-shadow:none;
     }
     .btn small{
@@ -343,15 +317,16 @@
       font-weight:900;
       white-space:nowrap;
     }
+
     .card{
       margin:12px 16px 0;
       padding:14px;
       border-radius:18px;
       border:1px solid rgba(255,255,255,.14);
       background:
-        radial-gradient(220px 140px at 18% 30%, rgba(45,129,224,.18), transparent 65%),
-        radial-gradient(240px 160px at 85% 25%, rgba(92,169,255,.16), transparent 65%),
-        rgba(255,255,255,.05);
+        radial-gradient(240px 160px at 18% 30%, rgba(245,158,11,.16), transparent 65%),
+        radial-gradient(260px 170px at 85% 25%, rgba(253,186,116,.10), transparent 65%),
+        rgba(255,255,255,.04);
       box-shadow: 0 18px 40px rgba(0,0,0,.26);
     }
     .card h2{
@@ -387,6 +362,7 @@
       font-size:13px;
       flex:0 0 auto;
       margin-top:1px;
+      color: rgba(245,245,245,.95);
     }
     .doc .row b{
       display:block;
@@ -407,6 +383,23 @@
       display:grid;
       grid-template-columns:1fr;
       gap:10px;
+    }
+
+    /* Right buttons: make "написать сейчас" with space after messenger */
+    .side__cta .btn{
+      justify-content:space-between;
+      padding:12px 14px;
+    }
+    .side__cta .btn .left{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:1000;
+    }
+    .side__cta .btn .right{
+      font-size:12px;
+      font-weight:900;
+      opacity:.88;
     }
 
     /* FAQ */
@@ -432,7 +425,7 @@
       font-size:13px;
     }
 
-    /* Footer legal */
+    /* Legal */
     .legal{
       margin-top:12px;
       padding:12px 14px;
@@ -443,7 +436,6 @@
       font-size:12px;
       font-weight:650;
     }
-    .legal a{ text-decoration: underline; text-underline-offset: 2px; }
 
     footer{
       padding:14px 0 18px;
@@ -473,6 +465,8 @@
       .actions{grid-template-columns:1fr}
       .fixed{display:grid}
       .spacer{display:block; height:92px}
+      .side__cta .btn{justify-content:center}
+      .side__cta .btn .right{display:none}
     }
   </style>
 </head>
@@ -505,7 +499,7 @@
       <!-- LEFT -->
       <section class="panel">
         <div class="pad">
-          <h1>Разберём вашу ситуацию с водительским удостоверением и объясним законные варианты действий</h1>
+          <h1>Разберём вашу ситуацию с водительским удостоверением и предложим возможные решения</h1>
           <p class="lead">
             Пишите в чат: что произошло и когда. Мы уточним детали и подскажем, какие шаги обычно делают в подобных случаях.
             Без звонков — спокойно и по делу.
@@ -514,22 +508,22 @@
           <div class="chips" aria-label="Преимущества">
             <div class="chip"><i aria-hidden="true">🕒</i>Ответ в чате</div>
             <div class="chip"><i aria-hidden="true">🔒</i>Конфиденциально</div>
-            <div class="chip"><i aria-hidden="true">⚖️</i>Только законные способы</div>
+            <div class="chip"><i aria-hidden="true">⚖️</i>По закону</div>
             <div class="chip"><i aria-hidden="true">📍</i>Удалённо</div>
           </div>
 
-          <div class="kpi" aria-label="Ожидания по работе">
+          <div class="kpi" aria-label="Что вы получите">
             <div class="box">
               <b>Первичный разбор</b>
-              <span>Коротко оценим ситуацию и подскажем направление</span>
+              <span>Коротко оценим ситуацию и дадим понятные ориентиры</span>
             </div>
             <div class="box">
-              <b>Порядок действий</b>
-              <span>Что сделать в первую очередь и какие документы важны</span>
+              <b>Решения и порядок</b>
+              <span>Возможные решения и что делать в первую очередь</span>
             </div>
             <div class="box">
-              <b>Без “гарантий”</b>
-              <span>Только честные варианты и риски, без обещаний результата</span>
+              <b>Проверка документов</b>
+              <span>Подскажем, какие пункты важны и что проверить</span>
             </div>
           </div>
 
@@ -538,7 +532,7 @@
               <div class="n">1</div>
               <div>
                 <p class="step__t">Пишите в мессенджер</p>
-                <p class="step__d">Коротко: что случилось, дата/город, что уже есть на руках.</p>
+                <p class="step__d">Коротко: что случилось, дата/город, что есть на руках.</p>
               </div>
             </div>
 
@@ -546,22 +540,21 @@
               <div class="n">2</div>
               <div>
                 <p class="step__t">Уточняем детали</p>
-                <p class="step__d">Пара вопросов, чтобы не дать ошибочный совет.</p>
+                <p class="step__d">Пара вопросов — чтобы правильно понять ситуацию.</p>
               </div>
             </div>
 
             <div class="step">
               <div class="n">3</div>
               <div>
-                <p class="step__t">Даём понятный план</p>
-                <p class="step__d">Что можно сделать законно, сроки, порядок, на что обратить внимание.</p>
+                <p class="step__t">Предлагаем решения</p>
+                <p class="step__d">Озвучим возможные решения и порядок действий.</p>
               </div>
             </div>
           </div>
 
           <div class="actions" aria-label="Связаться">
-            <!-- Можно добавить UTM: ?utm_source=vk&utm_medium=cpc&utm_campaign=... -->
-            <a class="btn btn--tg"
+            <a class="btn btn--primary"
                href="https://t.me/evgeniy_pravahelper?start=vk"
                target="_blank" rel="noopener nofollow">
               💬 Написать в Telegram
@@ -580,7 +573,7 @@
               <small>и вставить в чат</small>
             </button>
 
-            <a class="btn btn--vk"
+            <a class="btn btn--ghost"
                href="#faq"
                aria-label="Перейти к частым вопросам">
               ❓ Частые вопросы
@@ -593,14 +586,14 @@
               <div class="ic" aria-hidden="true">🧾</div>
               <div>
                 <b>Разбор постановлений и документов</b>
-                <p>Подскажем, какие пункты важны и что проверять в первую очередь.</p>
+                <p>Подскажем, какие пункты важны и что проверить в первую очередь.</p>
               </div>
             </div>
 
             <div class="li">
               <div class="ic" aria-hidden="true">🗂️</div>
               <div>
-                <b>Порядок обжалования и сроки</b>
+                <b>Сроки и порядок обжалования</b>
                 <p>Объясним общий порядок действий и типовые сроки по ситуации.</p>
               </div>
             </div>
@@ -608,18 +601,15 @@
             <div class="li">
               <div class="ic" aria-hidden="true">🧠</div>
               <div>
-                <b>Оценка рисков и вариантов</b>
-                <p>Честно расскажем, какие варианты законны и чем они отличаются.</p>
+                <b>Варианты и порядок шагов</b>
+                <p>Разберём, что обычно делают в подобных случаях и с чего начать.</p>
               </div>
             </div>
           </div>
 
           <div class="legal" aria-label="Юридическая информация">
-            <b style="color:rgba(238,242,255,.92);">Важно:</b> информация носит справочный характер и не является публичной офертой.
-            Первичный разбор в чате — без оплаты; дальнейшая юридическая помощь — по согласованию и при наличии возможности.
-            <br/><br/>
-            Для модерации и доверия лучше заполнить блок “Реквизиты/контакты” справа (ниже) и разместить
-            <a href="#privacy">политику конфиденциальности</a>.
+            Консультация предоставляется бесплатно. Дальнейшая юридическая помощь — по согласованию.<br/>
+            Информация на странице носит справочный характер и не является публичной офертой.
           </div>
 
           <div class="spacer" aria-hidden="true"></div>
@@ -627,61 +617,60 @@
       </section>
 
       <!-- RIGHT -->
-      <aside class="panel side" aria-label="Контакты и реквизиты">
+      <aside class="panel side" aria-label="Формат и быстрые действия">
         <div class="side__head">
-          <p class="side__title">Контакты и формат</p>
+          <p class="side__title">Формат работы</p>
           <span class="tag">онлайн-чат</span>
         </div>
 
-        <div class="card" aria-label="Как быстро начать">
-          <h2>Как начать</h2>
-          <p>Отправьте короткое описание и (если есть) фото/сканы документов. Можно без “лирики” — важны факты.</p>
+        <div class="card" aria-label="Как начать">
+          <h2>Что написать в первом сообщении</h2>
+          <p>Достаточно 3–5 строк: дата/город, что произошло, что есть из документов. Если документов нет — просто опишите ситуацию.</p>
 
-          <div class="doc" aria-label="Что лучше прислать">
+          <div class="doc" aria-label="Подсказки">
             <div class="row">
               <div class="ic" aria-hidden="true">📍</div>
               <div>
                 <b>Город и дата</b>
-                <span>Где и когда произошло, что именно случилось.</span>
+                <span>Где и когда произошло.</span>
               </div>
             </div>
             <div class="row">
               <div class="ic" aria-hidden="true">📄</div>
               <div>
                 <b>Документы (если есть)</b>
-                <span>Постановление, протокол, повестка, уведомления — что на руках.</span>
+                <span>Постановление/протокол/уведомления.</span>
               </div>
             </div>
             <div class="row">
               <div class="ic" aria-hidden="true">🧷</div>
               <div>
-                <b>Что уже делали</b>
-                <span>Писали жалобу, были в суде, сдавали документы и т.п.</span>
+                <b>Что уже предпринимали</b>
+                <span>Жалоба, суд, сдача документов и т.д.</span>
               </div>
             </div>
           </div>
         </div>
 
         <div class="side__cta" aria-label="Быстрые кнопки">
-          <a class="btn btn--tg"
+          <a class="btn btn--primary"
              href="https://t.me/evgeniy_pravahelper?start=vk"
              target="_blank" rel="noopener nofollow">
-            Telegram<br><small>написать сейчас</small>
+            <span class="left">Telegram</span>
+            <span class="right">написать сейчас</span>
           </a>
 
           <a class="btn btn--wa"
              href="https://wa.me/79290217097?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%83%D0%B4%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8E.%0A%0A%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%3A%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D0%B4%D0%B0%D1%82%D0%B0%2C%20%D1%87%D1%82%D0%BE%20%D1%81%D0%BB%D1%83%D1%87%D0%B8%D0%BB%D0%BE%D1%81%D1%8C%2C%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B%20%D0%B5%D1%81%D1%82%D1%8C%20(%D0%B5%D1%81%D0%BB%D0%B8%20%D0%B5%D1%81%D1%82%D1%8C)."
              target="_blank" rel="noopener nofollow">
-            WhatsApp<br><small>быстрый чат</small>
+            <span class="left">WhatsApp</span>
+            <span class="right">написать сейчас</span>
           </a>
 
-          <div class="legal" style="margin:0; border-radius:18px" aria-label="Реквизиты и идентификация">
-            <b style="color:rgba(238,242,255,.92);">Реквизиты/идентификация</b> (рекомендуется для доверия и модерации):
-            <br/>• ФИО/Наименование: <span style="color:rgba(238,242,255,.92)">[заполните]</span>
-            <br/>• Статус: <span style="color:rgba(238,242,255,.92)">[юрист / адвокат / ИП / ООО]</span>
-            <br/>• ИНН/ОГРН (если есть): <span style="color:rgba(238,242,255,.92)">[заполните]</span>
-            <br/>• Email: <span style="color:rgba(238,242,255,.92)">[заполните]</span>
-          </div>
+          <button class="btn btn--ghost" id="copyBtn2" type="button" aria-label="Скопировать шаблон сообщения (справа)">
+            <span class="left">Шаблон</span>
+            <span class="right">скопировать</span>
+          </button>
         </div>
 
         <div class="pad" id="faq" aria-label="FAQ">
@@ -689,29 +678,23 @@
           <div class="faq">
             <details>
               <summary>Это бесплатно?</summary>
-              <p>Первичный разбор в переписке — без оплаты. Если потребуется подготовка документов/представительство, условия обсуждаются отдельно.</p>
-            </details>
-
-            <details>
-              <summary>Вы гарантируете результат?</summary>
-              <p>Нет. В юридических вопросах результат зависит от обстоятельств и документов. Мы объясняем законные варианты, риски и порядок действий.</p>
+              <p>Первичный разбор в переписке — бесплатно. Если потребуется подготовка документов/сопровождение, условия обсуждаются отдельно.</p>
             </details>
 
             <details>
               <summary>Что нужно прислать?</summary>
-              <p>Город/дату, краткое описание и фото/сканы документов (если есть). Если документов нет — напишите, что именно происходило и кто оформлял.</p>
+              <p>Город/дату, краткое описание и документы (если есть). Если документов нет — опишите ситуацию своими словами.</p>
+            </details>
+
+            <details>
+              <summary>Сколько времени занимает ответ?</summary>
+              <p>Обычно отвечаем по мере поступления сообщений. Если вопрос срочный — напишите об этом в начале.</p>
             </details>
 
             <details>
               <summary>По всей России?</summary>
-              <p>Консультация в чате — да. Возможность дальнейшего сопровождения зависит от ситуации и региона.</p>
+              <p>Консультации в чате — да. Дальнейшее сопровождение зависит от ситуации и региона.</p>
             </details>
-          </div>
-
-          <div class="legal" id="privacy" aria-label="Политика конфиденциальности (кратко)">
-            <b style="color:rgba(238,242,255,.92);">Кратко о конфиденциальности:</b>
-            мы используем ваши сообщения и документы только для консультации и не передаём их третьим лицам без вашего согласия,
-            если иное не требуется законом. Полную политику можно разместить отдельной страницей/разделом при подключении домена.
           </div>
         </div>
       </aside>
@@ -725,7 +708,7 @@
 
   <!-- Mobile fixed buttons -->
   <div class="fixed" aria-label="Быстрые кнопки (моб)">
-    <a class="btn btn--tg"
+    <a class="btn btn--primary"
        href="https://t.me/evgeniy_pravahelper?start=vk"
        target="_blank" rel="noopener nofollow">
       Telegram
@@ -738,7 +721,6 @@
   </div>
 
   <script>
-    // Шаблон сообщения + копирование (повышает конверсию без “подозрительных” обещаний)
     (function(){
       const template =
 `Здравствуйте! Нужна консультация по водительскому удостоверению.
@@ -751,28 +733,31 @@
 
 Могу приложить фото/сканы документов.`;
 
-      const btn = document.getElementById('copyBtn');
-      if (!btn) return;
+      const bind = (id) => {
+        const btn = document.getElementById(id);
+        if (!btn) return;
+        btn.addEventListener('click', async () => {
+          try{
+            await navigator.clipboard.writeText(template);
+            const old = btn.innerHTML;
+            btn.innerHTML = "<span class='left'>Готово</span><span class='right'>скопировано</span>";
+            setTimeout(() => btn.innerHTML = old, 1700);
+          }catch(e){
+            const ta = document.createElement('textarea');
+            ta.value = template;
+            document.body.appendChild(ta);
+            ta.select();
+            try{ document.execCommand('copy'); }catch(_){}
+            document.body.removeChild(ta);
+            const old = btn.innerHTML;
+            btn.innerHTML = "<span class='left'>Готово</span><span class='right'>скопировано</span>";
+            setTimeout(() => btn.innerHTML = old, 1700);
+          }
+        });
+      };
 
-      btn.addEventListener('click', async () => {
-        try{
-          await navigator.clipboard.writeText(template);
-          const old = btn.innerHTML;
-          btn.innerHTML = "✅ Шаблон скопирован<small>вставьте в чат</small>";
-          setTimeout(() => btn.innerHTML = old, 1800);
-        }catch(e){
-          // fallback
-          const ta = document.createElement('textarea');
-          ta.value = template;
-          document.body.appendChild(ta);
-          ta.select();
-          try{ document.execCommand('copy'); }catch(_){}
-          document.body.removeChild(ta);
-          const old = btn.innerHTML;
-          btn.innerHTML = "✅ Шаблон скопирован<small>вставьте в чат</small>";
-          setTimeout(() => btn.innerHTML = old, 1800);
-        }
-      });
+      bind('copyBtn');
+      bind('copyBtn2');
     })();
   </script>
 </body>
